@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="BIONIC - A cutting-edge research project pushing the boundaries of biological and computational integration">
     <meta name="keywords" content="BIONIC, research, biology, computation, science">
     <meta name="author" content="barbaLab">
@@ -53,9 +53,26 @@
             align-items: center;
         }
 
+        /* Logo container (image + text) */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-image {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.08);
+            padding: 4px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        }
+
         .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
+            font-size: 1.35rem;
+            font-weight: 800;
             letter-spacing: 2px;
         }
 
@@ -234,6 +251,59 @@
             background: var(--secondary-color);
         }
 
+        /* Partners / Network Section under Team */
+        .partners {
+            margin-top: 2.5rem;
+            text-align: center;
+        }
+
+        .partners h3 {
+            font-size: 1.6rem;
+            color: var(--dark);
+            margin-bottom: 1.25rem;
+        }
+
+        .partners-grid {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .partner-card {
+            background: var(--white);
+            padding: 1.25rem 1rem;
+            border-radius: 12px;
+            width: 260px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.07);
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .partner-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+        }
+
+        .partner-logo {
+            width: 140px;
+            height: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        .partner-name {
+            font-weight: 700;
+            color: var(--dark);
+            font-size: 1rem;
+            text-align: center;
+        }
+
         /* Footer */
         footer {
             background: var(--dark);
@@ -276,6 +346,15 @@
             .features-grid {
                 grid-template-columns: 1fr;
             }
+
+            .logo-image {
+                width: 40px;
+                height: 40px;
+            }
+
+            .partner-card {
+                width: 45%;
+            }
         }
 
         @media (max-width: 480px) {
@@ -284,12 +363,22 @@
             }
 
             .logo {
-                font-size: 1.5rem;
+                font-size: 1.15rem;
+            }
+
+            .logo-image {
+                width: 34px;
+                height: 34px;
             }
 
             .nav-links {
                 flex-direction: column;
                 gap: 0.5rem;
+            }
+
+            .partner-card {
+                width: 100%;
+                max-width: 320px;
             }
         }
     </style>
@@ -298,7 +387,12 @@
     <!-- Header -->
     <header>
         <nav>
-            <div class="logo">BIONIC</div>
+            <div class="logo-container">
+                <!-- Add your project logo file at assets/images/bionic-logo.svg (recommended) -->
+                <img src="assets/images/bionic-logo.svg" alt="BIONIC project logo" class="logo-image" onerror="this.style.display='none'">
+                <div class="logo">BIONIC</div>
+            </div>
+
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -321,8 +415,8 @@
         <div class="about-content">
             <div class="about-text">
                 <p>
-                    BIONIC project seeks to revolutionize security and critical infrastructure protection through the development of a biohybrid intelligent system that mimics the behavior of a real brain. 
-                    Leveraging neuromorphic and biomimetic computing architectures, the project will emulate the brain's in vivo functionality, creating an adaptive computing platform capable of learning and being trained by a real biological brain. 
+                    BIONIC project seeks to revolutionize security and critical infrastructure protection through the development of a biohybrid intelligent system that mimics the behavior of a real b[...]
+                    Leveraging neuromorphic and biomimetic computing architectures, the project will emulate the brain's in vivo functionality, creating an adaptive computing platform capable of learn[...]
                 </p>
                 <p>
                     By bridging the gap between biological complexity and computational power, we aim to create innovative 
@@ -371,11 +465,39 @@
         <h2>Our Team</h2>
         <div class="team-content">
             <p>
-                The BIONIC project is led by an interdisciplinary team of researchers from , combining expertise 
+                The BIONIC project is led by an interdisciplinary team of researchers from partner institutions, combining expertise 
                 in molecular biology, computational science, and data analytics. We are committed to pushing the boundaries 
                 of what's possible at the intersection of biology and technology.
             </p>
             <a href="https://github.com/barbaLab/BIONIC" class="contact-info">View on GitHub</a>
+
+            <!-- Partners / Network (three universities with logos) -->
+            <div class="partners" aria-label="Network partners">
+                <h3>Network Partners</h3>
+
+                <div class="partners-grid">
+                    <!-- Università di Genova -->
+                    <a class="partner-card" href="https://www.unige.it/" target="_blank" rel="noopener noreferrer" aria-label="Università di Genova">
+                        <!-- Place logo at assets/images/unige-logo.svg -->
+                        <img src="assets/images/unige-logo.svg" alt="Università di Genova logo" class="partner-logo" onerror="this.style.display='none'">
+                        <div class="partner-name">Università di Genova</div>
+                    </a>
+
+                    <!-- Universität Zürich -->
+                    <a class="partner-card" href="https://www.uzh.ch/" target="_blank" rel="noopener noreferrer" aria-label="Universität Zürich">
+                        <!-- Place logo at assets/images/uzh-logo.svg -->
+                        <img src="assets/images/uzh-logo.svg" alt="Universität Zürich logo" class="partner-logo" onerror="this.style.display='none'">
+                        <div class="partner-name">Universität Zürich</div>
+                    </a>
+
+                    <!-- University of Bordeaux -->
+                    <a class="partner-card" href="https://www.u-bordeaux.fr/" target="_blank" rel="noopener noreferrer" aria-label="University of Bordeaux">
+                        <!-- Place logo at assets/images/bordeaux-logo.svg -->
+                        <img src="assets/images/bordeaux-logo.svg" alt="University of Bordeaux logo" class="partner-logo" onerror="this.style.display='none'">
+                        <div class="partner-name">University of Bordeaux</div>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
