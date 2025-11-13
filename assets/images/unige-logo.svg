@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" width="200" height="80" role="img" aria-label="University of Geneva Logo">
+  <title>University of Geneva Logo</title>
+  
+  <!-- Background -->
+  <rect width="200" height="80" fill="#DC143C" rx="6"/>
+  
+  <!-- Shield icon -->
+  <g transform="translate(20, 40)">
+    <path d="M 0,-20 L 8,-20 L 12,-12 L 12,12 Q 12,18 6,20 Q 0,22 -6,20 Q -12,18 -12,12 L -12,-12 L -8,-20 Z" 
+          fill="white" opacity="0.95"/>
+    <path d="M 0,-12 L 0,8" stroke="#DC143C" stroke-width="2"/>
+    <path d="M -6,-4 L 6,-4" stroke="#DC143C" stroke-width="2"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="48" y="35" font-family="Georgia, serif" font-size="16" font-weight="bold" fill="white">University of</text>
+  <text x="48" y="55" font-family="Georgia, serif" font-size="20" font-weight="bold" fill="white" letter-spacing="1">GENEVA</text>
+</svg>

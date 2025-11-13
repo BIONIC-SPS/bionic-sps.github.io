@@ -57,6 +57,21 @@
             font-size: 1.8rem;
             font-weight: bold;
             letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .logo-image {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
         }
 
         .nav-links {
@@ -234,6 +249,62 @@
             background: var(--secondary-color);
         }
 
+        /* Partners Section */
+        .partners {
+            padding: 80px 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .partners h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: var(--dark);
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .partner-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+            text-decoration: none;
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .partner-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .partner-logo {
+            width: 100%;
+            max-width: 200px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 1.5rem;
+        }
+
+        .partner-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-top: 0.5rem;
+        }
+
         /* Footer */
         footer {
             background: var(--dark);
@@ -276,6 +347,14 @@
             .features-grid {
                 grid-template-columns: 1fr;
             }
+
+            .partners-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .logo-image {
+                height: 32px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -298,7 +377,12 @@
     <!-- Header -->
     <header>
         <nav>
-            <div class="logo">BIONIC</div>
+            <div class="logo">
+                <div class="logo-container">
+                    <img src="assets/images/bionic-logo.svg" alt="BIONIC Logo" class="logo-image" onerror="this.style.display='none'">
+                    <span>BIONIC</span>
+                </div>
+            </div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -376,6 +460,25 @@
                 of what's possible at the intersection of biology and technology.
             </p>
             <a href="https://github.com/barbaLab/BIONIC" class="contact-info">View on GitHub</a>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners section-alt">
+        <h2>Our Partners</h2>
+        <div class="partners-grid">
+            <a href="https://www.unige.ch/" class="partner-card" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/unige-logo.svg" alt="University of Geneva" class="partner-logo" onerror="this.style.display='none'">
+                <div class="partner-name">University of Geneva</div>
+            </a>
+            <a href="https://www.uzh.ch/" class="partner-card" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/uzh-logo.svg" alt="University of Zurich" class="partner-logo" onerror="this.style.display='none'">
+                <div class="partner-name">University of Zurich</div>
+            </a>
+            <a href="https://www.u-bordeaux.fr/" class="partner-card" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/bordeaux-logo.svg" alt="University of Bordeaux" class="partner-logo" onerror="this.style.display='none'">
+                <div class="partner-name">University of Bordeaux</div>
+            </a>
         </div>
     </section>
 

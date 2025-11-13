@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" width="200" height="80" role="img" aria-label="University of Bordeaux Logo">
+  <title>University of Bordeaux Logo</title>
+  
+  <!-- Background -->
+  <rect width="200" height="80" fill="#8B0000" rx="6"/>
+  
+  <!-- Book/Laurel icon -->
+  <g transform="translate(20, 40)">
+    <rect x="-10" y="-12" width="20" height="24" fill="white" opacity="0.95" rx="2"/>
+    <line x1="-10" y1="-4" x2="10" y2="-4" stroke="#8B0000" stroke-width="1.5"/>
+    <line x1="-10" y1="4" x2="10" y2="4" stroke="#8B0000" stroke-width="1.5"/>
+    <path d="M -15,-18 Q -18,-10 -15,0 Q -18,10 -15,18" stroke="white" stroke-width="2" fill="none" opacity="0.8"/>
+    <path d="M 15,-18 Q 18,-10 15,0 Q 18,10 15,18" stroke="white" stroke-width="2" fill="none" opacity="0.8"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="48" y="35" font-family="Georgia, serif" font-size="14" font-weight="600" fill="white">University of</text>
+  <text x="48" y="55" font-family="Georgia, serif" font-size="20" font-weight="bold" fill="white" letter-spacing="1">BORDEAUX</text>
+</svg>
