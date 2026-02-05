@@ -2,7 +2,7 @@ import React from 'react';
 
 const Dissemination = () => {
   const speakers = [
-    'Prof. Federico Barban — University of Genova, Italy',
+    'Prof. Federico Barba — University of Genova, Italy',
     'Dr. Marta Carè — IRCCS Ospedale Policlinico San Martino, Italy',
     'Dr. Mark Iskarous — University of Chicago, USA',
     'Prof. Elisa Donati — Institute of Neuroinformatics, UZH & ETH Zurich, Switzerland',
