@@ -372,6 +372,31 @@
       margin-top: 0.5rem;
     }
 
+        .partner-contact {
+      margin-top: 0.6rem;
+      font-size: 0.95rem;
+      color: var(--gray);
+      line-height: 1.4;
+    }
+    
+    .contact-button {
+      display: inline-block;
+      margin-top: 0.4rem;
+      padding: 0.45rem 1.1rem;
+      font-size: 0.9rem;
+      border-radius: 20px;
+      background: var(--primary-color);
+      color: var(--white);
+      text-decoration: none;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+.contact-button:hover {
+  background: var(--secondary-color);
+  transform: translateY(-1px);
+}
+
+
     /* Footer */
     footer {
       background: var(--dark);
@@ -619,38 +644,54 @@
   </section>
 
   <!-- Team Section -->
-  <section id="team">
-    <h2>Our Team</h2>
-    <div class="team-content">
-      <p>
-        The BIONIC project is led by an interdisciplinary team of researchers from partner institutions, combining expertise
-        in neuromorphic engineering, computational neuroscience, and data analytics. We are committed to pushing the boundaries
-        of what's possible at the intersection of biology and technology.
-      </p>
-      <a href="https://github.com/barbaLab/BIONIC" class="contact-info">View on GitHub</a>
+<section id="team">
+  <h2>Our Team</h2>
+  <div class="team-content">
+    <p>
+      The BIONIC project is led by an interdisciplinary team of researchers from partner institutions, combining expertise
+      in neuromorphic engineering, computational neuroscience, and data analytics. We are committed to pushing the boundaries
+      of what's possible at the intersection of biology and technology.
+    </p>
+    <a href="https://github.com/barbaLab/BIONIC" class="contact-info">View on GitHub</a>
 
-      <div class="partners" aria-label="Network partners">
-        <h3>Network Partners</h3>
+    <div class="partners" aria-label="Network partners">
+      <h3>Network Partners</h3>
 
-        <div class="partners-grid">
-          <a class="partner-card" href="https://dibris.unige.it/en" target="_blank" rel="noopener noreferrer" aria-label="Università di Genova">
-            <img src="assets/images/unige-logo.svg" alt="Università di Genova logo" class="partner-logo" onerror="this.style.display='none'">
-            <div class="partner-name">Università di Genova</div>
-          </a>
+      <div class="partners-grid">
+        <!-- Università di Genova -->
+        <a class="partner-card" href="https://dibris.unige.it/en" target="_blank" rel="noopener noreferrer" aria-label="Università di Genova">
+          <img src="assets/images/unige-logo.svg" alt="Università di Genova logo" class="partner-logo" onerror="this.style.display='none'">
+          <div class="partner-name">Università di Genova</div>
+          <div class="partner-contact">
+            <strong>Prof. Michela Chiappalone</strong><br>
+            <a class="contact-button" href="mailto:michela.chiappalone@unige.it">Contact</a>
+          </div>
+        </a>
 
-          <a class="partner-card" href="https://www.ini.uzh.ch/en.html" target="_blank" rel="noopener noreferrer" aria-label="Universität Zürich">
-            <img src="assets/images/uzh-logo.svg" alt="Universität Zürich logo" class="partner-logo" onerror="this.style.display='none'">
-            <div class="partner-name">Universität Zürich</div>
-          </a>
+        <!-- Universität Zürich -->
+        <a class="partner-card" href="https://www.ini.uzh.ch/en.html" target="_blank" rel="noopener noreferrer" aria-label="Universität Zürich">
+          <img src="assets/images/uzh-logo.svg" alt="Universität Zürich logo" class="partner-logo" onerror="this.style.display='none'">
+          <div class="partner-name">Universität Zürich</div>
+          <div class="partner-contact">
+            <strong>Prof. Elisa Donati</strong><br>
+            <a class="contact-button" href="mailto:elisa@ini.uzh.ch">Contact</a>
+          </div>
+        </a>
 
-          <a class="partner-card" href="https://www.ims-bordeaux.fr/" target="_blank" rel="noopener noreferrer" aria-label="University of Bordeaux">
-            <img src="assets/images/bordeaux-logo.svg" alt="University of Bordeaux logo" class="partner-logo" onerror="this.style.display='none'">
-            <div class="partner-name">University of Bordeaux</div>
-          </a>
-        </div>
+        <!-- University of Bordeaux -->
+        <a class="partner-card" href="https://www.ims-bordeaux.fr/" target="_blank" rel="noopener noreferrer" aria-label="University of Bordeaux">
+          <img src="assets/images/bordeaux-logo.svg" alt="University of Bordeaux logo" class="partner-logo" onerror="this.style.display='none'">
+          <div class="partner-name">University of Bordeaux</div>
+          <div class="partner-contact">
+            <strong>Prof. Timothée Levi</strong><br>
+            <a class="contact-button" href="mailto:timothee.levi@u-bordeaux.fr">Contact</a>
+          </div>
+        </a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Footer -->
   <footer>
