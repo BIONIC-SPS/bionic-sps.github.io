@@ -112,7 +112,7 @@
         .hero {
             background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
             color: var(--white);
-            padding: 150px 2rem 100px;
+            padding: 90px 2rem 70px; /* reduced height */
             text-align: center;
             margin-top: 60px;
         }
@@ -404,11 +404,10 @@
     <!-- Header -->
     <header>
         <nav>
-            <div class="logo">
-                <div class="logo-container">
-                    <img src="assets/images/Bionic_Logo.png" alt="BIONIC Logo" class="logo-image" onerror="this.style.display='none'">
-                    <span>BIONIC</span>
-                </div>
+            <div class="logo-container">
+                <img src="assets/images/Bionic_Logo.png" alt="BIONIC Logo" class="logo-image" onerror="this.style.display='none'">
+                <span>BIONIC</span>
+                <img src="assets/images/nato_logo.jpeg" alt="NATO Logo" class="logo-image nato-logo" onerror="this.style.display='none'">
             </div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
@@ -503,11 +502,12 @@
 <section id="dissemination" class="section-alt">
     <h2>Publications & Dissemination</h2>
 
-    <div class="about-content">
-        <div class="about-text">
+    <div class="dissemination-grid">
+        <!-- Left column: Publications -->
+        <div class="dissemination-col">
             <p>
-                The BIONIC project is committed to open science and broad dissemination of its results. 
-                Scientific findings, datasets, and software tools developed throughout the project will be 
+                The BIONIC project is committed to open science and broad dissemination of its results.
+                Scientific findings, datasets, and software tools developed throughout the project will be
                 shared with the research community, end-users, and the general public.
             </p>
 
@@ -517,19 +517,22 @@
                 <li>Scientific workshops, conferences, and public events</li>
                 <li>Engagement with end-users and technology transfer offices</li>
             </ul>
+        </div>
 
-            <!-- Event Highlight -->
-            <div class="event-highlight">
+        <!-- Right column: Workshop -->
+        <div class="dissemination-col">
+            <div class="event-card">
                 <h3>Featured Workshop</h3>
                 <p class="event-title">
                     <strong>A Neuromorphic and Neurostimulation Approach for Sensorimotor Restoration</strong>
                 </p>
 
                 <p>
-                    This workshop addresses the challenge of restoring meaningful sensorimotor integration 
-                    through peripheral nerve stimulation and intracortical microstimulation (ICMS), with a 
+                    This workshop addresses the challenge of restoring meaningful sensorimotor integration
+                    through peripheral nerve stimulation and intracortical microstimulation (ICMS), with a
                     focus on neuromorphic and closed-loop approaches for rehabilitation and neuroprosthetics.
                 </p>
+
                 <p><strong>Speakers include:</strong></p>
                 <ul class="feature-list">
                     <li>Prof. Federico Barban — University of Genova, Italy</li>
@@ -543,18 +546,13 @@
                    target="_blank"
                    rel="noopener noreferrer"
                    class="contact-info"
-                   style="margin-top:1.5rem; display:inline-block;">
+                   style="margin-top:1.25rem; display:inline-block;">
                     View Workshop Details
                 </a>
             </div>
         </div>
-
-        <div class="about-image">
-            Dissemination
-        </div>
     </div>
 </section>
-
 
 
     <!-- Team Section -->
