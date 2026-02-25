@@ -1,0 +1,14 @@
+main:
+  - title: "Home"
+    url: /
+    icon: "fa-solid fa-house"
+  - title: "Research"
+    url: "/research/"
+    icon: "fa-solid fa-flask"
+  # - title: "Publications"
+  #   url: "/publications/"
+  - title: "Team"
+    url: "/network/"
+  # - title: "Contact"  
+  #   url: "/contact/"
+

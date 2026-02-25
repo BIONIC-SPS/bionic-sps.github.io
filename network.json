@@ -1,0 +1,6 @@
+---
+layout: null
+permalink: /assets/data/network.json
+---
+
+{{ site.data.network | jsonify }}

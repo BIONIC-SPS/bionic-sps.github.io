@@ -1,0 +1,24 @@
+<div class="partner-grid">
+  {% for p in site.data.network %}
+    <a class="partner-card" href="{{ p.url }}" target="_blank" rel="noopener noreferrer">
+      {% if p.logo %}
+        <img class="partner-logo" src="{{ p.logo | relative_url }}" alt="{{ p.name }} logo">
+      {% endif %}
+
+      <div class="partner-name">{{ p.name }}</div>
+
+      {% if p.contact_name or p.contact_email %}
+        <div class="partner-contact">
+          {% if p.contact_name %}
+            <div><strong>{{ p.contact_name }}</strong></div>
+          {% endif %}
+          {% if p.contact_email %}
+            <div class="partner-actions">
+              <a class="partner-email" href="mailto:{{ p.contact_email }}">Contact</a>
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
+    </a>
+  {% endfor %}
+</div>
