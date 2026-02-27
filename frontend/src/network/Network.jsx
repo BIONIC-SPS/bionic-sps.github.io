@@ -8,9 +8,12 @@ export default function Network() {
     const baseurl = el?.dataset?.baseurl ?? "";
 
     // Prefer baseurl if provided, otherwise fall back to your current dev URL
-    const url = baseurl
-      ? `${baseurl.replace(/\/$/, "")}/assets/data/network.json`
-      : "http://127.0.0.1:4000/assets/data/network.json";
+    if (!baseurl && location.hostname !== "localhost") {
+      console.warn(
+        "baseurl is empty; expected data-baseurl on the mount element",
+      );
+    }
+    const url = `${(baseurl ?? "").replace(/\/$/, "")}/assets/data/network.json`;
 
     fetch(url)
       .then((r) => {
@@ -19,7 +22,7 @@ export default function Network() {
       })
       .then(setNetwork)
       .catch((e) => console.error("Failed to load network.json", e));
-  }, []);
+  };, []);
 
   const openPartner = (url) => {
     if (!url) return;
