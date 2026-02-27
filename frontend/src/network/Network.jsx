@@ -22,7 +22,7 @@ export default function Network() {
       })
       .then(setNetwork)
       .catch((e) => console.error("Failed to load network.json", e));
-  };, []);
+  }, []);
 
   const openPartner = (url) => {
     if (!url) return;
