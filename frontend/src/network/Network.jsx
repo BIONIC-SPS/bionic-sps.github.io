@@ -4,7 +4,7 @@ export default function Network() {
   const [network, setNetwork] = useState([]);
 
   useEffect(() => {
-    const el = document.getElementById("partners-root");
+    const el = document.getElementById("network-root");
     const baseurl = el?.dataset?.baseurl ?? "";
 
     // Prefer baseurl if provided, otherwise fall back to your current dev URL
