@@ -1,0 +1,17 @@
+- name: "Università di Genova"
+  url: "https://dibris.unige.it/en"
+  logo: "/assets/images/unige-logo.svg"
+  contact_name: "Prof. Michela Chiappalone"
+  contact_email: "michela.chiappalone@unige.it"
+
+- name: "Universität Zürich"
+  url: "https://www.ini.uzh.ch/en.html"
+  logo: "/assets/images/uzh-logo.svg"
+  contact_name: "Prof. Elisa Donati"
+  contact_email: "elisa@ini.uzh.ch"
+
+- name: "University of Bordeaux"
+  url: "https://www.ims-bordeaux.fr/"
+  logo: "/assets/images/bordeaux-logo.svg"
+  contact_name: "Prof. Timothée Levi"
+  contact_email: "timothee.levi@u-bordeaux.fr"

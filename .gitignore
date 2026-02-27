@@ -4,4 +4,40 @@ _site
 .jekyll-metadata
 vendor
 
-frontend/node_modules
+# Dependencies
+frontend/node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+frontend/build/
+frontend/dist/
+
+# Environment variables
+frontend/*.env
+frontend/*.env.local
+frontend/*.env.development.local
+frontend/*.env.test.local
+frontend/*.env.production.local
+
+# Logs and debug
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# Testing
+frontend/coverage/
+
+# OS generated
+frontend/.DS_Store
+frontend/Thumbs.db
+
+# Editor/IDE
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# Caches
+.eslintcache
+.stylelintcache
