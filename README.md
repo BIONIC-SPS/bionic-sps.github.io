@@ -2,96 +2,75 @@
 
 A cutting-edge research project pushing the boundaries of biological and computational integration.
 
-## React Application
+## Architecture
 
-The BIONIC website has been refactored to use React with Bulma CSS framework for a modern, component-based architecture.
-
-### Prerequisites
-
-- Node.js (version 14 or higher)
-- npm (comes with Node.js)
-
-### Local Development
-
-1. **Install Dependencies**:
-   ```bash
-   npm install
-   ```
-
-2. **Start Development Server**:
-   ```bash
-   npm start
-   ```
-   The application will open at http://localhost:3000
-
-3. **Build for Production**:
-   ```bash
-   npm run build
-   ```
-   Creates an optimized production build in the `build` folder.
+The BIONIC website is a **Jekyll** static site using the [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/) theme, with a separate React application in the `frontend/` directory for interactive network visualisation.
 
 ### Project Structure
 
 ```
-BIONIC/
-├── public/
-│   ├── assets/
-│   │   └── images/          # Logo and partner images
-│   ├── index.html           # HTML template
-│   └── ...
-├── src/
-│   ├── components/          # React components
-│   │   ├── Header.js        # Navigation header
-│   │   ├── Hero.js          # Hero section
-│   │   ├── About.js         # About section
-│   │   ├── Features.js      # Research highlights
-│   │   ├── Dissemination.js # Publications section
-│   │   ├── Team.js          # Team and partners
-│   │   └── Footer.js        # Footer
-│   ├── App.js               # Main App component
-│   ├── index.js             # Entry point
-│   └── index.css            # Global styles
-├── package.json
+bionic-sps.github.io/
+├── _config.yml              # Jekyll site configuration
+├── _data/                   # Site data (navigation, network, UI text)
+├── _includes/               # Jekyll template partials
+│   ├── head/custom.html     # Custom <head> content
+│   ├── footer/custom.html   # Custom footer content
+│   └── network_cards.html   # Partner network card layout
+├── _pages/                  # Site pages (contact, network, research)
+├── assets/
+│   ├── css/main.scss        # Custom styles
+│   ├── images/              # Logo and partner images
+│   └── react/               # Built output from the frontend app
+├── frontend/                # Vite + React app (network visualisation)
+│   ├── src/
+│   │   ├── main.jsx         # React entry point
+│   │   ├── main.css         # App styles
+│   │   └── network/
+│   │       └── Network.jsx  # Network visualisation component
+│   ├── vite.config.js       # Vite build configuration
+│   └── package.json         # Frontend dependencies
+├── index.md                 # Homepage content
+├── Gemfile                  # Ruby / Jekyll dependencies
 └── README.md
+```
+
+### Prerequisites
+
+- **Jekyll site**: Ruby and Bundler (`gem install bundler`)
+- **Frontend app**: Node.js 16+ and npm
+
+### Local Development
+
+#### Jekyll site
+
+```bash
+bundle install
+bundle exec jekyll serve
+```
+
+The site will be available at http://localhost:4000.
+
+#### Frontend React app (network visualisation)
+
+```bash
+cd frontend
+npm install
+npm run build   # outputs to ../assets/react/
 ```
 
 ### Technologies Used
 
-- **React**: JavaScript library for building user interfaces
-- **Bulma**: Modern CSS framework based on Flexbox
-- **Create React App**: Build tool and development environment
+- **Jekyll** with the Minimal Mistakes remote theme
+- **React 18** + **Vite** for the network visualisation widget
+- **GitHub Pages** for hosting
 
 ### Deployment
 
-The React application can be deployed to:
-- **GitHub Pages**: Use `npm run build` and deploy the build folder
-- **Netlify**: Connect repository and auto-deploy on push
-- **Vercel**: Import repository for automatic deployments
-- Any static hosting service that supports React apps
-
-### Testing
-
-Run the test suite:
-```bash
-npm test
-```
+The site is deployed automatically to GitHub Pages on every push to the default branch. The `frontend/` directory is excluded from Jekyll processing; its built output in `assets/react/` is included instead.
 
 ## Features
 
-- ⚛️ Modern React architecture with component-based design
-- 🎨 Bulma CSS framework for responsive, mobile-first design
-- 📱 Fully responsive layout optimized for all devices
-- 🔍 SEO optimized with proper meta tags
-- ⚡ Fast performance with optimized builds
-- 🎯 Clean, professional aesthetic
-- ♿ Accessible navigation and semantic HTML
-
-## Original Static Version
-
-The original static HTML version is preserved as `original-index.html` for reference.
-
-## Learn More
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-For Bulma documentation, visit [Bulma CSS](https://bulma.io/).
+- 📄 Jekyll-powered static site with Minimal Mistakes theme
+- 🌐 Interactive partner network visualisation (React + Vite)
+- 📱 Fully responsive, mobile-first layout
+- 🎯 Clean, professional academic aesthetic
