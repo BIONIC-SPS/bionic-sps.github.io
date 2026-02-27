@@ -5,7 +5,7 @@ permalink: /network/
 react: true
 react_app:
   js: "react/main.js"
-  css: "reactmain.css"
+  css: "react/main.css"
 ---
 
 The BIONIC project is led by an interdisciplinary team of researchers from partner institutions, combining expertise in neuromorphic engineering, computational neuroscience, and data analytics. We are committed to pushing the boundaries of what's possible at the intersection of biology and technology.
