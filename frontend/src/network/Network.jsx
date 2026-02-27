@@ -34,7 +34,7 @@ export default function Network() {
   };
 
   return (
-    <div className="partner-grid" id="partners-root">
+    <div className="partner-grid">
       {network.map((p) => {
         const name = p.name ?? "";
         const url = p.url;
